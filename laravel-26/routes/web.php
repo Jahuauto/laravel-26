@@ -11,6 +11,13 @@
 |
 */
 
+
+Route::resource('/pages', 'PagesController');
+Route::resource('/photos', 'PhotosController');
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+Route::resource('/home', 'HomeController@index');
